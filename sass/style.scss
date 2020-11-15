@@ -1,0 +1,70 @@
+@import 'variables';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: $background;
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 330px;
+        width: 350px;
+        margin: auto;
+        padding: auto;
+
+        .header {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            background-color: $header-bg;
+            h1 {
+                font-family: $header-font;
+                font-size: 25px;
+                color: white;
+            }
+        }
+
+        section {
+            margin-top: 10px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            .s-container {
+                height: 90%;
+                width: 90%;
+                .list-item {
+                    padding: 20px;
+                    
+                }
+            }
+            .btn-addtask {
+                cursor: pointer;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 35px;
+                background-color: $header-bg;
+                height: 30px;
+                width: 90px;
+                p {
+                    color: white;
+                }
+            }
+        }
+ }
+}
+
+
