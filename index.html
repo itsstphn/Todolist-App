@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List App</title>
     <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/25b0047afb.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
@@ -15,16 +18,24 @@
             </div>
             <section>
                 <div class="s-container">
-                    <div class="list-item">
-                        <p>Cook at Home</p>
-                        
-                    </div>
+                   <ul class="todo-list"></ul>
                 </div>
-                <div class="btn-addtask">
-                    <p>New Task</p>
+                <div class="btn-newtask">
+                    <p><b>&#43;</b> New Task </p>
                 </div>
-            </section>
+            </section> 
         </div>
+
+
+            <form>
+                <input type="text" class="todo-input" maxlength="20">
+                <button class="todo-btn" type="submit"><b>&#43;</b></button>
+            
+            </form>
+            <div class="formBg"></div>
+        
     </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

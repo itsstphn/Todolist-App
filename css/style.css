@@ -65,20 +65,61 @@ main .container section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  height: 266px;
   width: 100%;
 }
 
 main .container section .s-container {
   height: 90%;
   width: 90%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
-main .container section .s-container .list-item {
-  padding: 20px;
+main .container section .s-container .todo-list {
+  height: 246px;
 }
 
-main .container section .btn-addtask {
+main .container section .s-container .todo-list .completed {
+  text-decoration: line-through;
+  color: white;
+}
+
+main .container section .s-container .todo-list .todo-item {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.2rem;
+  padding: 0 .5rem;
+  font-size: 1.3rem;
+  color: #9A44E8;
+}
+
+main .container section .s-container .todo-list .todo-item p {
+  font-family: 'Lato', sans-serif;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  overflow: hidden;
+}
+
+main .container section .s-container .todo-list .todo-item .trash-btn, main .container section .s-container .todo-list .todo-item .complete-btn {
+  background: #fff;
+  color: #9A44E8;
+  border: none;
+  padding: .5rem .7rem;
+  cursor: pointer;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+main .container section .s-container .todo-list .todo-item .trash-btn .fa-trash, main .container section .s-container .todo-list .todo-item .trash-btn .fa-check, main .container section .s-container .todo-list .todo-item .complete-btn .fa-trash, main .container section .s-container .todo-list .todo-item .complete-btn .fa-check {
+  pointer-events: none;
+}
+
+main .container section .btn-newtask {
+  margin-bottom: -2rem;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,11 +132,70 @@ main .container section .btn-addtask {
           justify-content: center;
   border-radius: 35px;
   background-color: #9A44E8;
-  height: 30px;
-  width: 90px;
+  height: 40px;
+  width: 150px;
 }
 
-main .container section .btn-addtask p {
+main .container section .btn-newtask p {
   color: white;
+  font-size: 1.5rem;
+}
+
+main .container section .btn-newtask:hover {
+  background-color: #7418c7;
+}
+
+main form {
+  background-color: #D6E3EB;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 28rem;
+  height: 7rem;
+  padding: 2.3rem;
+  z-index: 2;
+  border-radius: 5px;
+  display: none;
+}
+
+main form .todo-input {
+  border: none;
+  padding: .5rem;
+  height: 2.5rem;
+  width: 20rem;
+  border-radius: 2px;
+}
+
+main form .todo-btn {
+  background-color: #9A44E8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
+main form .todo-btn:hover {
+  background-color: #7418c7;
+}
+
+main .formBg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
